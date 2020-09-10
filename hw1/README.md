@@ -70,6 +70,7 @@ and see if the sentences make sense.
 Based on your observation, update the annotations in the `manifest.tt` by adding manual annotation override
 to `MANUAL_PROPERTY_CANONICAL_OVERRIDE` in `tool/autoqa/wikidata/manual-annotations.js`.
 to improve the quality of synthesized sentences.
+Documentation on how the annotation works can be found in [Almond Wiki](https://wiki.almond.stanford.edu/genie/annotations).
 
 Rerun the data synthesis by running the following command:
 ```bash
@@ -124,7 +125,9 @@ Place your input file under `$(exp)/eval/input.txt`, and run the annotation scri
 make experiment=$(exp) eval_set=eval annotate
 ```
 
-This command will start command line interface to annotate your questions with ThingTalk. 
+This command will start command line interface to annotate your questions with ThingTalk.
+You can find a guide to ThingTalk in [Almond Wiki](https://wiki.almond.stanford.edu/thingtalk/guide).
+ 
 For each question, the top candidates predicted by the trained model will be provided. 
 You can type in the number of the candidate to choose the correct one. 
 If none of the candidate is correct, but some candidate is close to what we want, you can 
