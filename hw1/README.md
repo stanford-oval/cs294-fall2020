@@ -1,7 +1,7 @@
 # Build a QA Skill for a Wikidata Domain with Genie
 
 In this homework, you will learn to use Genie and build a question-answering skill for a Wikidata domain of your choice. 
-**Please sign up for the domain [here](https://docs.google.com/spreadsheets/d/1iibWKklrBbH6JD7vJfaMHyMbsipxHrFw6OlCoORdkhI/edit?usp=sharing)**. 
+**Please sign up for the domain [here](https://docs.google.com/spreadsheets/d/1iibWKklrBbH6JD7vJfaMHyMbsipxHrFw6OlCoORdkhI/edit#gid=0?usp=sharing)**. 
 Each domain can have a maximum of 2 students. 
 This is a group homework, students signed up for the same domain should work together and only submit one zip file at the end.
 
