@@ -50,17 +50,6 @@ install_deps_debian() {
 	yarn global add thingpedia-cli
 }
 
-install_deps_mac() {
-    echo "About to install nodejs 10"
-	sudo brew install node@10
-	echo "About to gettext"
-	sudo brew install gettext
-	echo "About to install yarn"
-	sudo brew install yarn
-	echo "About to install thingpedia cli"
-	yarn global add thingpedia-cli
-}
-
 install_deps() {
 	if grep -qE "ID(_LIKE)?=.*fedora.*" /etc/os-release ; then
 		install_deps_dnf
@@ -68,8 +57,6 @@ install_deps() {
 		install_deps_ubuntu
 	elif grep -qE "ID(_LIKE)?=.*debian.*" /etc/os-release ; then
 		install_deps_debian
-    elif [[ "$OSTYPE" == "darwin"* ]] ; then
-        install_deps_mac
 	else
 		echo "Cannot detect the running distro. Please install nodejs 10.* and yarn using your package manager."
 		exit 1
@@ -117,32 +104,11 @@ else
 fi
 
 
-if ! test -d thingtalk-units ; then
-	git clone https://github.com/stanford-oval/thingtalk-units
-	pushd thingtalk-units >/dev/null
-	git checkout wip/area
-	yarn
-	yarn link
-	popd >/dev/null
-fi
-
-if ! test -d thingtalk ; then
-	git clone https://github.com/stanford-oval/thingtalk
-	pushd thingtalk >/dev/null
-	yarn link thingtalk-units
-	yarn
-	yarn link
-	popd >/dev/null
-fi
-
 if ! test -d genie-toolkit ; then
 	git clone https://github.com/stanford-oval/genie-toolkit
 	pushd genie-toolkit >/dev/null
 	git checkout wip/wikidata-single-turn
-	yarn link thingtalk-units
-	yarn link thingtalk
 	yarn
-	yarn link
 	popd >/dev/null
 fi
 
