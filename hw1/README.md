@@ -25,7 +25,9 @@ previous questions. These questions will serve as the evaluation set for your QA
 
 ## Setup
 
-First, you need to install Genie toolkit and its dependencies. We prepared an script `install-cloud.sh` to install everything
+First, you need to install Genie toolkit and its dependencies. We prepared a script 
+[`install-cloud.sh`](https://github.com/stanford-oval/cs294-fall2020/blob/master/hw1/install-cloud.sh)
+to install everything
 in a linux cloud instance. For local testing, we recommend to install them manually. 
 
 Genie toolkit requires`nodejs` (>=10.0) and `yarn` as a package manager. 
@@ -61,7 +63,7 @@ yarn
 ## Testing Genie with Your Domain
 The experiment uses the starter code in `genie-toolkit`. Get into the directory:
 ```bash
-cd starter/wikdiata
+cd starter/wikidata
 ```
 
 Following the instructions in [`genie-toolkit/starter/wikidata/README.md`](https://github.com/stanford-oval/genie-toolkit/blob/wip/wikidata-single-turn/starter/wikidata/README.md)
