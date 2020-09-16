@@ -109,6 +109,7 @@ if ! test -d genie-toolkit ; then
 	pushd genie-toolkit >/dev/null
 	git checkout wip/wikidata-single-turn
 	yarn
+	yarn link
 	popd >/dev/null
 fi
 
