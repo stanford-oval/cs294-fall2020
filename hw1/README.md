@@ -40,20 +40,22 @@ The installation should work on any modern Linux distro, on OS X with Homebrew, 
 The homework requires `nodejs` (==10.*), with `yarn` as a package manager. 
 See [nodejs](https://nodejs.org/en/download/releases/) and [yarn](https://classic.yarnpkg.com/en/docs/install/) for installation details. 
 
-You will also need [gettext](https://www.gnu.org/software/gettext/) and [wget](https://www.gnu.org/software/wget/). 
+You will also need [gettext](https://www.gnu.org/software/gettext/), [wget](https://www.gnu.org/software/wget/) and git. 
 On Ubuntu, install them with:
 ```bash
-sudo apt install gettext wget
+sudo apt install gettext wget git
 ```
 On Fedora, use:
 ```bash
-sudo dnf install gettext wget
+sudo dnf install gettext wget git
 ```
 On Mac, use:
 ```bash
 brew install gettext wget
 ```
-You can check your installation by running `node --version`, `yarn --version`, `gettext --version`, and `wget --version`.
+Type `git` to install git from the XCode command-line tools.
+
+You can check your installation by running `node --version`, `yarn --version`, `gettext --version`, `wget --version`, and `git --version`.
 
 In addition, you will need [the Thingpedia CLI tools](https://github.com/stanford-oval/thingpedia-cli),
 which provide an easy way to download data from and upload data to Thingpedia. 
