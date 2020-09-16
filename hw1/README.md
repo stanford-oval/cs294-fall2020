@@ -40,20 +40,20 @@ The installation should work on any modern Linux distro, on OS X with Homebrew, 
 The homework requires `nodejs` (==10.*), with `yarn` as a package manager. 
 See [nodejs](https://nodejs.org/en/download/releases/) and [yarn](https://classic.yarnpkg.com/en/docs/install/) for installation details. 
 
-You will also need [gettext](https://www.gnu.org/software/gettext/), [wget](https://www.gnu.org/software/wget/) and git. 
+You will also need [gettext](https://www.gnu.org/software/gettext/), [wget](https://www.gnu.org/software/wget/), git, make, a C/C++ compiler, and Python 3. 
 On Ubuntu, install them with:
 ```bash
-sudo apt install gettext wget git
+sudo apt install gettext wget git make build-essential g++ python3 python3-pip
 ```
 On Fedora, use:
 ```bash
-sudo dnf install gettext wget git
+sudo dnf install gettext wget git make gcc-c++ python3 python3-pip
 ```
 On Mac, use:
 ```bash
 brew install gettext wget
 ```
-Type `git` to install git from the XCode command-line tools.
+Type `git` to install git from the XCode command-line tools. Python should be already installed, but if not you can also install it from Homebrew.
 
 You can check your installation by running `node --version`, `yarn --version`, `gettext --version`, `wget --version`, and `git --version`.
 
@@ -82,10 +82,22 @@ cd genie-toolkit
 git checkout wip/wikidata-single-turn
 yarn
 yarn link
+cd ..
 ```
 
 Note the `git checkout` command. You must use the **wip/wikidata-single-turn** branch of Genie for this assignment.
 The branch is likely to be updated often as we respond to feedback on the homework. Check the [class community forum](https://community.almond.stanford.edu/c/cs294sw-aut2020/14) for announcements of fixes.
+
+Finally, you will need to install [genienlp](https://github.com/stanford-oval/genienlp), our ML library.
+Run the following command to install it:
+
+```bash
+git clone https://github.com/stanford-oval/genienlp
+cd genienlp
+pip3 install --user -e .
+pip3 install --user tensorboard
+cd ..
+```
 
 ## Part 1. Collecting Questions
 You have chosen a domain you like, you must have a lot of interesting questions for this domain yourself! 
