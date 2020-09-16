@@ -38,7 +38,7 @@ For faster iteration, you can install the starter code on your local machine and
 The installation should work on any modern Linux distro, on OS X with Homebrew, and on Windows 10 with WSL.
 
 The homework requires `nodejs` (==10.*), with `yarn` as a package manager. 
-See [nodejs](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/docs/install/) for installation details. 
+See [nodejs](https://nodejs.org/en/download/releases/) and [yarn](https://classic.yarnpkg.com/en/docs/install/) for installation details. 
 
 You will also need [gettext](https://www.gnu.org/software/gettext/) and [wget](https://www.gnu.org/software/wget/). 
 On Ubuntu, install them with:
