@@ -19,7 +19,7 @@ install_deps_dnf() {
 install_deps_ubuntu() {
 	echo "About to install git, make, gettext, curl, python3"
 	sudo apt -y install git make gettext g++ curl python3-pip
-	curl -sL https://nodejs.org/dist/latest-v10.x/node-v10.22.1-linux-x64.tar.xz -o node-v10.20.1-linux-x64.tar.xz
+	curl -sL https://nodejs.org/dist/latest-v10.x/node-v10.22.1-linux-x64.tar.xz -o node-v10.22.1-linux-x64.tar.xz
 	echo "About to install nodejs"
 	sudo tar -C /opt --no-same-owner -xf node-v10.22.1-linux-x64.tar.xz
 	sudo ln -sf /opt/node-v10.22.1-linux-x64/bin/node /usr/local/bin/node
@@ -36,7 +36,7 @@ install_deps_ubuntu() {
 install_deps_debian() {
 	echo "About to install git, make, gettext, curl, python3"
 	sudo apt -y install git make g++ curl python3-pip apt-transport-https gettext
-	curl -sL https://nodejs.org/dist/latest-v10.x/node-v10.22.1-linux-x64.tar.xz -o node-v10.20.1-linux-x64.tar.xz
+	curl -sL https://nodejs.org/dist/latest-v10.x/node-v10.22.1-linux-x64.tar.xz -o node-v10.22.1-linux-x64.tar.xz
 	echo "About to install nodejs"
 	sudo tar -C /opt --no-same-owner -xf node-v10.22.1-linux-x64.tar.xz
 	sudo ln -sf /opt/node-v10.22.1-linux-x64/bin/node /usr/local/bin/node
