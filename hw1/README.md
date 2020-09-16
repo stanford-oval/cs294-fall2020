@@ -32,9 +32,9 @@ in a linux cloud instance. For local testing, we recommend to install them manua
 
 Genie toolkit requires`nodejs` (>=10.0) and `yarn` as a package manager. 
 See [nodejs](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/docs/install/) for installation details. 
-Genie toolkit also needs [gettext](https://www.gnu.org/software/gettext/). 
-For Mac users, you can install it by `brew install gettext`. 
-You can check your installation by running `node --version`, `yarn --version` and `gettext --version`.
+Genie toolkit also needs [gettext](https://www.gnu.org/software/gettext/) and [wget](https://www.gnu.org/software/wget/). 
+For Mac users, you can install them by `brew install gettext wget`. 
+You can check your installation by running `node --version`, `yarn --version`, `gettext --version`, and `wget --version`.
 
 In addition, you will need [thingpedia-cli](https://github.com/stanford-oval/thingpedia-cli),
 which provides an easy way to download data from and upload data to Thingpedia. 
