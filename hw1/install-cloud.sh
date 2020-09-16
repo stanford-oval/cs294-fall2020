@@ -97,7 +97,7 @@ add_path() {
 add_path "$HOME/.local/bin"
 add_path "$HOME/.yarn/bin"
 
-if grep -qE "ID(_LIKE)?=.*debian.*" /etc/os-release ; then
+if which pip >/dev/null 2>&1 && grep -qE "ID(_LIKE)?=.*debian.*" /etc/os-release ; then
 	PIP=pip
 else
 	PIP=pip3
