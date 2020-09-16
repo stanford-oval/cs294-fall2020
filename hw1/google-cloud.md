@@ -1,7 +1,6 @@
 # Google Cloud Setup and Tutorial
 
-Adopted from [CS231N's Tutorial](https://github.com/cs231n/gcloud)
-
+Adopted from [CS231N's Tutorial](https://github.com/cs231n/gcloud).
 
 # Table of contents
 
