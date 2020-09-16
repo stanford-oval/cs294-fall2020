@@ -152,7 +152,7 @@ Follow **Step 6** to annotate the data and evaluate the model. You can ask the T
 2. Did you need to drop any sentence? Why?
 3. **Extra**: Can you improve the accuracy? How high can you go?
 
-**Note**": You do not need to prepare a _test set_, only a dev set.
+**Note**: You do not need to prepare a _test set_, only a dev set.
 
 ## Submission
 Your submission should include a complete dialogue agent for a new domain. 
