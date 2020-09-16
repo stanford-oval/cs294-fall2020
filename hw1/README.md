@@ -122,7 +122,10 @@ We will use the wikidata starter code in Genie. Get into the directory:
 cd genie-toolkit/starter/wikidata
 ```
 
-Follow **Step 2** in the [`README.md` file](https://github.com/stanford-oval/genie-toolkit/blob/wip/wikidata-single-turn/starter/wikidata/README.md) to generate a **small-size** dataset. At which step, you will obtain both the _manifest_ with the declarations of the queries your skill will support, as well as the dataset of sentences.
+Follow the instructions in the [`README.md` file](https://github.com/stanford-oval/genie-toolkit/blob/wip/wikidata-single-turn/starter/wikidata/README.md)
+to configure the starter code (skip the Installation part).
+
+Follow **Step 1** and **Step 2** to generate a **small-size** dataset. After you are done, you will obtain both the _manifest_ with the declarations of the queries your skill will support, as well as the dataset of sentences.
 
 Now, follow the instructions in **Step 3** of the README and in the [Thingpedia guide](https://wiki.almond.stanford.edu/thingpedia/guide/natural-language) to edit the manual annotations for each property. Write as many annotations as you can. **In this part, you will be graded on the correctness and comprehensiveness of the annotations**. Keep iterating small size datasets to see the effect of your annotations.
 
