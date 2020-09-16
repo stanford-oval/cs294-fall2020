@@ -7,8 +7,8 @@ set -o pipefail
 install_deps_dnf() {
 	echo "About to install nodejs 10"
 	sudo dnf -y module install nodejs:10
-	echo "About to install make, g++, python3"
-	sudo dnf -y install make gcc-c++ python3-pip
+	echo "About to install git, make, g++, python3"
+	sudo dnf -y install git make gcc-c++ python3-pip
 	echo "About to install yarn"
 	curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
 	sudo dnf -y install yarn
@@ -17,13 +17,13 @@ install_deps_dnf() {
 }
 
 install_deps_ubuntu() {
-	echo "About to install make, curl, python3"
-	sudo apt -y install make g++ curl python3-pip
-	curl -sL https://nodejs.org/dist/latest-v10.x/node-v10.20.1-linux-x64.tar.xz -o node-v10.20.1-linux-x64.tar.xz
+	echo "About to install git, make, curl, python3"
+	sudo apt -y install git make g++ curl python3-pip
+	curl -sL https://nodejs.org/dist/latest-v10.x/node-v10.22.1-linux-x64.tar.xz -o node-v10.20.1-linux-x64.tar.xz
 	echo "About to install nodejs"
-	sudo tar -C /opt --no-same-owner -xf node-v10.20.1-linux-x64.tar.xz
-	sudo ln -sf /opt/node-v10.20.1-linux-x64/bin/node /usr/local/bin/node
-	sudo ln -sf /opt/node-v10.20.1-linux-x64/bin/npm /usr/local/bin/npm
+	sudo tar -C /opt --no-same-owner -xf node-v10.22.1-linux-x64.tar.xz
+	sudo ln -sf /opt/node-v10.22.1-linux-x64/bin/node /usr/local/bin/node
+	sudo ln -sf /opt/node-v10.22.1-linux-x64/bin/npm /usr/local/bin/npm
 	echo "About to install yarn"
 	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 	echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
@@ -34,13 +34,13 @@ install_deps_ubuntu() {
 }
 
 install_deps_debian() {
-	echo "About to install make, curl, python3"
-	sudo apt -y install make g++ curl python3-pip apt-transport-https gettext
-	curl -sL https://nodejs.org/dist/latest-v10.x/node-v10.20.1-linux-x64.tar.xz -o node-v10.20.1-linux-x64.tar.xz
+	echo "About to install git, make, curl, python3"
+	sudo apt -y install git make g++ curl python3-pip apt-transport-https gettext
+	curl -sL https://nodejs.org/dist/latest-v10.x/node-v10.22.1-linux-x64.tar.xz -o node-v10.20.1-linux-x64.tar.xz
 	echo "About to install nodejs"
-	sudo tar -C /opt --no-same-owner -xf node-v10.20.1-linux-x64.tar.xz
-	sudo ln -sf /opt/node-v10.20.1-linux-x64/bin/node /usr/local/bin/node
-	sudo ln -sf /opt/node-v10.20.1-linux-x64/bin/npm /usr/local/bin/npm
+	sudo tar -C /opt --no-same-owner -xf node-v10.22.1-linux-x64.tar.xz
+	sudo ln -sf /opt/node-v10.22.1-linux-x64/bin/node /usr/local/bin/node
+	sudo ln -sf /opt/node-v10.22.1-linux-x64/bin/npm /usr/local/bin/npm
 	echo "About to install yarn"
 	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 	echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
@@ -64,7 +64,7 @@ install_deps() {
 }
 
 check_deps() {
-	for dep in node npm yarn make g++ pip3 ; do
+	for dep in git node npm yarn make g++ pip3 ; do
 		if ! which $dep >/dev/null 2>&1 ; then
 			return 1
 		fi
