@@ -67,6 +67,10 @@ After installation, you should get a command called `thingpedia`.
 If encounter `command not found`, make sure the Yarn global bin directory
 (usually `~/.yarn/bin`) is in your PATH. You can find the path with the command
 `yarn global bin`.
+You can change the location by using the following command:
+```
+yarn config set prefix ~/.yarn
+```
 
 If the directory is not in the PATH, add the following to your `~/.bash_profile` (or `~/.profile`, depending on the distro or OS version)
 ```bash
