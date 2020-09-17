@@ -14,7 +14,7 @@ You will be responsible for creating and managing (starting, stopping) the VM in
 **You will be billed while the instances are running** (and you will be responsible for charges beyond the coupon) 
 so make sure you turn off any VM instance you are not using.
 
-It is recommended to create a CPU+GPU instance, using an NVidia V100 GPU (~$2/hour)
+It is recommended to create a CPU+GPU instance, using an NVidia V100 GPU (~$2/hour).
 
 We recommend using the Oregon (us-west-1) region, 
 as it slightly cheaper and includes a larger set of available machine types, 

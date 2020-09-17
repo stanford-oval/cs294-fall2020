@@ -27,9 +27,8 @@ Now you have an idea of what kind of information Wikidata has, come up with anot
 that can be answered by Wikidata. Put them in the spreadsheet as well, with a blank row to separate with 
 previous questions. These questions will serve as the evaluation set for your QA skill.
 
-## Part 2. Writing Annotations
-In this part, we will use Genie to generate a training set of Wikidata questions and their corresponding ThingTalk code.
-To do so, we will learn how to write annotations on each property in Wikidata, to teach Genie how to refer to that property in natural language.
+## Part 2. Evaluating a Pretrained Model
+In this part, we will use your sentences to evaluate a pretrained model prepared by the teaching staff.
 
 We will use the wikidata starter code in Genie. Get into the directory:
 ```bash
@@ -39,37 +38,38 @@ cd genie-toolkit/starter/wikidata
 Follow the **Configuration** instructions in the [`README.md` file](https://github.com/stanford-oval/genie-toolkit/blob/wip/wikidata-single-turn/starter/wikidata/README.md)
 to configure the starter code (skip the Installation part).
 
-Follow **Step 1** and **Step 2** to generate a **small-size** dataset. After you are done, you will obtain both the _manifest_ with the declarations of the queries your skill will support, as well as the dataset of sentences.
-
-Now, follow the instructions in **Step 3** of the README and in the [Thingpedia guide](https://wiki.almond.stanford.edu/thingpedia/guide/natural-language) to edit the manual annotations for each property. Write as many annotations as you can, and keep iterating small size datasets to see the effect of your annotations.
-
-### Questions
-1. How many forms can you come up?
-2. Are all the generated sentences grammatically correct (ignoring minor things like singular/plural)?
-3. Are there sentences that you cannot get Genie to generate? Are they specific to this domain, or are they general forms?
-
-## Part 3. Training and Evaluating a Model
-In this part, we will train a neural model that can translate natural language into ThingTalk queries. We will then use the 20 questions you came up with to evaluate the model, and see how well we did.
-
-Follow **Step 2** in the [`README.md` file](https://github.com/stanford-oval/genie-toolkit/blob/wip/wikidata-single-turn/starter/wikidata/README.md) to generate a 
-full size dataset, and follow **Step 4** to train the model. **This will take several hours** on the Google Cloud VM, so budget your time in advance.
+Follow **Step 1** to generate the _manifest_ of the QA skill, follow **Steps 2 to 3** to download and evaluate the pretrained model on synthesized.
 
 Now you have a trained model, you can use it to annotate the 20 questions you came up with. 
 Use the questions that use properties that exist in Wikidata (the second set of 20 questions).
 Copy over the questions from the spreadsheet and put them under `$(exp)/eval/input.txt`, 
 with one question each line, and in the first line put "utterance".
 
-Follow **Step 6** to annotate the data and evaluate the model. You can ask the TA for help with annotations, at office hours or in the [class community forum](https://community.almond.stanford.edu/c/cs294sw-aut2020/14).
+Follow **Step 4** to annotate the data and evaluate the model. You can ask the TA for help with annotations, at office hours or in the [class community forum](https://community.almond.stanford.edu/c/cs294sw-aut2020/14).
 
 ### Questions
-1. Can you obtain at least **50% accuracy** on the questions you wrote? If you do not achieve the accuracy, you can try again with a more varied dataset, with more annotations that more closely match the questions in the dev set.
-2. Did you need to drop any sentence? Why?
-3. **Extra**: Can you improve the accuracy? How high can you go?
+1. Did you need to drop any sentence while annotating? Why?
+2. What accuracy do you get on the questions you wrote? Does it match the accuracy on the synthesized data?
+3. Look at the error analysis file. Can you identify what kind of errors the model is making?
 
 **Note**: You do not need to prepare a _test set_, only a dev set.
 
+## Part 3. Writing Annotations
+In this part, we will try to improve the accuracy obtained in Part 1. We will use Genie to generate a training set of Wikidata questions and their corresponding ThingTalk code, aiming to make this dataset as similar to the dev set as possible.
+To do so, we will learn how to write annotations on each property in Wikidata, to teach Genie how to refer to that property in natural language.
+
+Follow the instructions in **Step 3** of the README and in the [Thingpedia guide](https://wiki.almond.stanford.edu/thingpedia/guide/natural-language) to edit the manual annotations for each property.
+Then follow **Step 6** to generate a small-size dataset.
+Write as many annotations as you can, and keep iterating small size datasets to see the effect of your annotations.
+Finally, follow **Step 6** again to generate a full-size dataset.
+
+### Questions
+1. How many forms can you come up?
+2. Are all the generated sentences grammatically correct (ignoring minor things like singular/plural)?
+3. Are there sentences that you cannot get Genie to generate? Are they specific to this domain, or are they general forms?
+
 ## Submission
-Your submission should include a complete dialogue agent for a new domain. 
+Your submission should include all the work your group did on one domain (one submission per group). 
 Package the whole starter code and all generated files (datasets, trained models, etc.) 
 into a zip file or tarball, then upload it to [Stanford Box](https://stanford.account.box.com/login). 
 
