@@ -31,6 +31,38 @@ as it slightly cheaper and includes a larger set of available machine types,
 but any North American region should work.
 See detailed instructions and a tutorial for GCP [here](./google-cloud.md).
 
+### Running on FarmShare
+The parts of this homework that do not require GPU training can also be run on
+[rice.stanford.edu](https://web.stanford.edu/group/farmshare/cgi-bin/wiki/index.php/Main_Page),
+the Stanford cluster dedicated to homework.
+
+To set up rice to run this homework, do:
+```bash
+ssh rice.stanford.edu
+module load anaconda3 gcc
+git clone https://github.com/stanford-oval/cs294-fall2020
+cd cs294-fall2020/hw1
+./install-rice.sh
+```
+
+The `install-rice.sh` script might ask you to log out and log in again. In that
+case, you should log out, log in, and re-run the script until the message "Installation complete"
+appears. **You must execute `module load anaconda3 gcc` every time you log in to rice.**
+
+You can check that the installation was correct by executing the comands:
+```bash
+genie --help
+genienlp --help
+```
+If either one results in a "command not found" error, there was an error in your
+setup. In that case, please post a message in the [class community forum](https://community.almond.stanford.edu/c/cs294sw-aut2020/14)
+or ask the TA at office hours.
+
+The script will create a clone of `genie-toolkit` in the `cs294-fall2020/hw1`
+directory. Inside the `genie-toolkit` directory, you will find the starter code
+for this homework in the `starter/wikidata` folder.
+
+
 ### Manual Installation
 
 For faster iteration, you can install the starter code on your local machine and develop locally.

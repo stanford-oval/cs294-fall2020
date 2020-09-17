@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 set -e
-set -x
 set -o pipefail
 
 add_path() {
@@ -28,28 +27,29 @@ add_path() {
 add_path "$HOME/.local/bin"
 add_path "$HOME/.yarn/bin"
 
-if ! test -f ~/.local/bin/node ; do
+if ! test -f ~/.local/bin/node ; then
 	echo "Installing nodejs"
 	curl -sL https://nodejs.org/dist/latest-v10.x/node-v10.22.1-linux-x64.tar.xz -o node-v10.22.1-linux-x64.tar.xz
-	tar node-v10.22.1-linux-x64.tar.xz
-	ln -sf ./node-v10.22.1-linux-x64/bin/node ~/.local/bin/node
-	ln -sf ./node-v10.22.1-linux-x64/bin/npm ~/.local/bin/npm
+	tar xf node-v10.22.1-linux-x64.tar.xz
+	ln -sf `pwd`/node-v10.22.1-linux-x64/bin/node ~/.local/bin/node
+	ln -sf `pwd`/node-v10.22.1-linux-x64/bin/npm ~/.local/bin/npm
 fi
 
-if ! which yarn >/dev/null 2>&1 ; do
+if ! which yarn >/dev/null 2>&1 ; then
 	echo "Installing yarn"
 	wget https://yarnpkg.com/latest.tar.gz -O yarn-latest.tar.gz
-	tar zvxf yarn-latest.tar.gz
-	ln -sf ./yarn-v1.22.5/bin/yarn ~/.local/bin/yarn
+	tar xf yarn-latest.tar.gz
+	ln -sf `pwd`/yarn-v1.22.5/bin/yarn ~/.local/bin/yarn
 	yarn config set prefix ~/.yarn
 fi
 
-if ! which thingpedia >/dev/null 2>&1 ; do
+if ! which thingpedia >/dev/null 2>&1 ; then
 	echo "Installing thingpedia cli"
 	yarn global add thingpedia-cli
 fi
 
 if ! test -d genie-toolkit ; then
+	echo "Installing genie-toolkit"
 	git clone https://github.com/stanford-oval/genie-toolkit
 	pushd genie-toolkit >/dev/null
 	git checkout wip/wikidata-single-turn
@@ -59,9 +59,12 @@ if ! test -d genie-toolkit ; then
 fi
 
 if ! test -d genienlp ; then
+	echo "Installing genienlp"
 	git clone https://github.com/stanford-oval/genienlp
 	pushd genienlp
 	pip install --user -e .
-	pip install tensorboard
+	pip install --user tensorboard
 	popd
 fi
+
+echo "Installation complete"
