@@ -2,12 +2,11 @@
 
 In this homework, you will learn to use Genie and build a question-answering skill for a Wikidata domain of your choice. 
 **Please sign up for the domain [here](https://docs.google.com/spreadsheets/d/1iibWKklrBbH6JD7vJfaMHyMbsipxHrFw6OlCoORdkhI/edit#gid=0?usp=sharing)**. 
-Each domain can have a maximum of 2 students. 
-This is a group homework, students signed up for the same domain should work together and only submit one zip file at the end.
+Students work in pairs to handle a domain and to submtit one zip file together. The groups should all work on different domains. So, sign up soon to your favorite domain.
 
-**Please start early and budget your time accordingly!** 
-This homework requires generating a large dataset and training a large neural network. 
+We want all students to have hands-on experience in training a large neural network.  (No prior knowledge in machine learning is assumed.)  
 Simply running every command once may take more than 10 hours.
+**Please start early and budget your time accordingly!**
 
 ## Setup
 
