@@ -96,7 +96,7 @@ The training will take several hours to finish. Once done, evaluate the trained 
 
 ### Questions
 1. What accuracy do you get on the questions you wrote this time? 
-2. Do the annotations you added to the system help? 
+2. Did the annotations you added to the system help? 
 
 ## Submission
 Your submission should include all the work your group did on one domain (one submission per group). 
