@@ -69,7 +69,7 @@ so you do not need to run the installation again.
 In this part, we will try to improve the accuracy obtained in Part 1. We will use Genie to generate a training set of Wikidata questions and their corresponding ThingTalk code, aiming to make this dataset as similar to the dev set as possible.
 To do so, we will learn how to write annotations on each property in Wikidata, to teach Genie how to refer to that property in natural language.
 
-Follow the instructions in **Step 3** of the README and in the [Thingpedia guide](https://wiki.almond.stanford.edu/thingpedia/guide/natural-language) to edit the manual annotations for each property.
+Follow the instructions in **Step 3** of the README and the [Thingpedia guide](https://wiki.almond.stanford.edu/thingpedia/guide/natural-language) to edit the manual annotations for each property.
 Then follow **Step 6** to generate a small-size dataset.
 Write as many annotations as you can, and keep iterating small size datasets to see the effect of your annotations.
 Finally, follow **Step 6** again to generate a full-size dataset.
@@ -88,6 +88,16 @@ use srun to submit a job to wheat:
 srun --mem=18G make experiment=$(exp) datadir
 ```
 
+## Part 4. Training Your Own Model 
+In this part, we will train a neural model using the dataset you have generated. 
+Follow the instructions in **Step 7** of the README to run the training. 
+The training will take several hours to finish. Once done, evaluate the trained model on the eval set you have created. 
+(Similar to Part 2, but with a different model ID)
+
+### Questions
+1. What accuracy do you get on the questions you wrote this time? 
+2. Do the annotations you added to the system help? 
+
 ## Submission
 Your submission should include all the work your group did on one domain (one submission per group). 
 Package the generated `datadir` into a zip file or tarball, 
@@ -98,4 +108,4 @@ Each group should submit a text file on Canvas, and include the following inform
 - SUID of each group member
 - link to the uploaded file on Stanford box (make sure you choose "People in your company" when creating the shared link)
 - a code snippet containing the modified `MANUAL_PROPERTY_CANONICAL_OVERRIDE` in `manual-annotations.js`.
-- written answers to the questions in part 2 and part 3
+- written answers to the questions in part 2, 3 and 4.
