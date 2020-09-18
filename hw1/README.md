@@ -54,6 +54,17 @@ Follow **Step 4** to annotate the data and evaluate the model. You can ask the T
 
 **Note**: You do not need to prepare a _test set_, only a dev set.
 
+### Notes For Farmshare (Rice)
+The models cannot be evaluated directly on **rice**, because PyTorch does not run on rice.
+Instead, you must upgrade to **wheat**, a larger and more modern compute node. To do so, from inside run, run the following:
+```bash
+srun --pty --qos=interactive $SHELL -l
+```
+
+This command will give an interactive shell inside a wheat compute node, where you
+can run the commands normally. All rice and wheat nodes share the home directory
+so you do not need to run the installation again.
+
 ## Part 3. Writing Annotations
 In this part, we will try to improve the accuracy obtained in Part 1. We will use Genie to generate a training set of Wikidata questions and their corresponding ThingTalk code, aiming to make this dataset as similar to the dev set as possible.
 To do so, we will learn how to write annotations on each property in Wikidata, to teach Genie how to refer to that property in natural language.
@@ -67,6 +78,15 @@ Finally, follow **Step 6** again to generate a full-size dataset.
 1. How many forms can you come up?
 2. Are all the generated sentences grammatically correct (ignoring minor things like singular/plural)?
 3. Are there sentences that you cannot get Genie to generate? Are they specific to this domain, or are they general forms?
+
+### Notes For Farmshare (Rice)
+Generating the datasets should be possible inside rice directly, as rice has enough
+memory and compute power, but to avoid memory limitations, it is recommended to
+use srun to submit a job to wheat:
+
+```bash
+srun --mem=18G make experiment=$(exp) datadir
+```
 
 ## Submission
 Your submission should include all the work your group did on one domain (one submission per group). 
