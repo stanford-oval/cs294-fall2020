@@ -123,3 +123,14 @@ pip3 install --user -e .
 pip3 install --user tensorboard
 cd ..
 ```
+
+Make sure the pip python path is in our `PATH` environment.
+In Linux, this is usually `~/.local/bin`. For MacOS, it should be installed under `/Users/$(username)/Library/Python/$(python-version)/bin`.
+Add it to your `PATH` by running:
+```bash
+# Linux:
+export PATH="$HOME/.local/bin:$PATH"
+# Mac:
+export PATH="/Users/$(username)/Library/Python/$(python-version)/bin:$PATH"
+```
+You can add that line in your `~/.bash_profile` (or `~/.profile`, depending on the distro) to make that change permanent.
