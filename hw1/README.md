@@ -70,14 +70,12 @@ Finally, follow **Step 6** again to generate a full-size dataset.
 
 ## Submission
 Your submission should include all the work your group did on one domain (one submission per group). 
-Package the whole starter code and all generated files (datasets, trained models, etc.) 
-into a zip file or tarball, then upload it to [Stanford Box](https://stanford.account.box.com/login). 
+Package the generated `datadir` into a zip file or tarball, 
+then upload it to [Stanford Box](https://stanford.account.box.com/login). 
 
 Each group should submit a text file on Canvas, and include the following information:
 - the domain of the group
 - SUID of each group member
-- a link to the spreadsheet with the first 20 questions (make sure the link is set to be viewable for anyone in Stanford)
 - link to the uploaded file on Stanford box (make sure you choose "People in your company" when creating the shared link)
 - a code snippet containing the modified `MANUAL_PROPERTY_CANONICAL_OVERRIDE` in `manual-annotations.js`.
-- a text file with the written answers to the questions in part 2 and part 3
-- the final accuracy obtained by your model
+- written answers to the questions in part 2 and part 3
