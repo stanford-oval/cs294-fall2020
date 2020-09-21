@@ -21,6 +21,9 @@ as it slightly cheaper and includes a larger set of available machine types,
 but any North American region should work.
 See detailed instructions and a tutorial for GCP [here](./google-cloud.md).
 
+To install the dependencies, glone this repository and run `install-cloud.sh` under `hw1` directory. 
+You will need to logout and login again to load the corresponding commands. 
+
 ### Running on FarmShare
 The parts of this homework that do not require GPU training can also be run on
 [rice.stanford.edu](https://web.stanford.edu/group/farmshare/cgi-bin/wiki/index.php/Main_Page),
