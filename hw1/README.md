@@ -100,7 +100,7 @@ The training will take several hours to finish. Once done, evaluate the trained 
 
 ## Submission
 Your submission should include all the work your group did on one domain (one submission per group). 
-Package the generated `datadir` and the model(s) you trained into a zip file or tarball, 
+Package the generated `datadir`, `eval` folder with annotated questions, and the model(s) you trained into a zip file or tarball, 
 then upload it to [Stanford Box](https://stanford.account.box.com/login). 
 
 Each group should submit a text file on Canvas, and include the following information:
