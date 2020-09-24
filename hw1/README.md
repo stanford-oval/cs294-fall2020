@@ -69,7 +69,7 @@ so you do not need to run the installation again.
 In this part, we will try to improve the accuracy obtained in Part 1. We will use Genie to generate a training set of Wikidata questions and their corresponding ThingTalk code, aiming to make this dataset as similar to the dev set as possible.
 To do so, we will learn how to write annotations on each property in Wikidata, to teach Genie how to refer to that property in natural language.
 
-Follow the instructions in **Step 3** of the README and the [Thingpedia guide](https://wiki.almond.stanford.edu/thingpedia/guide/natural-language) to edit the manual annotations for each property.
+Follow the instructions in **Step 5** of the README and the [Thingpedia guide](https://wiki.almond.stanford.edu/thingpedia/guide/natural-language) to edit the manual annotations for each property.
 Then follow **Step 6** to generate a small-size dataset.
 Write as many annotations as you can, and keep iterating small size datasets to see the effect of your annotations.
 Finally, follow **Step 6** again to generate a full-size dataset.
